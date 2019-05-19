@@ -1,9 +1,16 @@
-// pages/index.js
+/* global jest, describe, test, expect */
+import React from 'react'
+import ReactShallowRenderer from 'react-test-renderer/shallow'
+import NextLink from 'next/link'
+import nextRoutes from '../routes/route'
 
-import Layout from '../components/my_layout'
-
-const indexPageContent = <p>Hello Next.js</p>
-
-export default function Index() {
-  return <Layout content={indexPageContent} />
+IndexPage.getInitalProps = async ({
+  pathname,
+  query, 
+  asPath,
+  req,
+  res,
+  err
+})=>{
+  console.log(pathname)
 }
