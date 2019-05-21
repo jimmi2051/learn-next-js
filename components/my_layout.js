@@ -5,8 +5,7 @@ const layoutStyle = {
   padding: 20,
   border: '1px solid #DDD'
 }
-
-export default function Layout(props) {
+const layout = (props) => {
   return (
     <div style={layoutStyle}>
       <Header />
@@ -14,3 +13,4 @@ export default function Layout(props) {
     </div>
   )
 }
+export default layout
