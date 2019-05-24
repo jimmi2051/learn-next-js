@@ -9,6 +9,9 @@ const list = [
   { name: 'post', id: 4, title: 'The Empire Strikes Back' },
   { name: 'post', id: 5, title: "abc" },
 ]
+const Blog = () => {
+  return (<h1> This is Blog {match.params.blogname}</h1>)
+}
 const index = () => {
   return (
     <>
@@ -20,6 +23,7 @@ const index = () => {
             </li>
           )
         )}
+        <li><Route exact strict path="/blog/:blogname" component={Blog}/></li>
         {/* <li><Link route="post" id="1"><a>Luke Skywalker</a></Link></li>
       <li><Link route="post" id="2"><a>C-3PO</a></Link></li>
       <li><Link route="user" id="1"><a>A New Hope</a></Link></li>
